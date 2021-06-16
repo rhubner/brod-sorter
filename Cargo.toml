@@ -9,3 +9,4 @@ edition = "2018"
 [dependencies]
 kamadak-exif = "0.5.4"
 walkdir = "2"
+jpeg-decoder = "0.1.22"
