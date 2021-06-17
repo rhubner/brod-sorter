@@ -28,6 +28,7 @@ fn main() {
                 match format {
                     Option::Some(path) => {
                         println!("Prejnemovavam soubor : {}", path);
+                        move_file(entry.path(), &path);
                     }
                     _ => println!("Nemohu formatovat cestu")
                 }
@@ -41,7 +42,7 @@ fn main() {
 }
 
 
-fn copy_file(source: &Path, _dest: &str) {
+fn move_file(source: &Path, _dest: &str) {
 
     let dest = Path::new(_dest);
     let dest_dir = dest.parent().unwrap();
